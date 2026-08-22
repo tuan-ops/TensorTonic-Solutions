@@ -1,10 +1,8 @@
 import numpy as np
 
-def swish(x):
-    """
-    Implement Swish activation function.
-    """
+def swish(x: list) -> np.ndarray:
+    """Return Swish applied elementwise to x."""
     # Write code here
     x = np.asarray(x)
-    result = x * 1/(1 + np.exp(-x))
-    return result
+    sigmoid = 1 / (1 + np.exp(-x))
+    return x * sigmoid
